@@ -201,7 +201,6 @@ input {
 }
 
 
-/*carusel*/
 
 
 /*bloglist*/
@@ -275,6 +274,10 @@ input {
         font-size: 16px;
     }
 
+    .image-slider{
+        display: none;
+    }
+
     
 
     
@@ -296,10 +299,11 @@ input {
      .everything-you{
         padding: 100px 60px 20px 50px;
     }
+         .image-slider {
+             display: none;
+         }
 
-   .navbar{
-    width: 50%;
-   }
+
   
 
    
@@ -312,6 +316,12 @@ input {
     .button-learn{
         padding-bottom: 50px;
     }
+
+         .image-slider, .previous-button, .next-button {
+             display: none;
+         }
+
+         
 
 }
 
@@ -335,7 +345,7 @@ input {
 
 .post-list {
     margin-top: 50px;
-    padding: 20px;
+    padding: 40px;
 }
 
 
@@ -358,9 +368,7 @@ input {
     color: black;
 }
 
-.details-title{
 
-}
 
 
 .loading-circle {
@@ -414,26 +422,22 @@ input {
 }
 
 
+/* Add your existing CSS styles */
 
-.slider-container {
+.image-slider {
+    margin-top: 30px;
+    position: relative;
     width: 100%;
     overflow: hidden;
 }
 
-.slider {
+.image-slider-container {
     display: flex;
-    transition: transform 0.3s ease-in-out;
 }
 
-.slide {
-    width: 100%;
+.image-slider-container img {
+    width: 50%;
+    height: auto;
 }
 
-.nav-navigation {
-    text-align: center;
-}
 
-.prev-button,
-.next-button {
-    margin: 10px;
-}
