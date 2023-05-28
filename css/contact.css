@@ -1,0 +1,70 @@
+.contactform {
+    margin-bottom: 50px;
+    margin: 100px
+}
+
+input[type="textt"],
+input[type="mail"],
+textarea {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 8px;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    border-radius: 50px;
+    padding: 10px 50px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    background-color: #F8B300;
+    border: transparent;
+}
+
+
+form {
+    align-self: center;
+    padding: 200px;
+    max-width: 1200px;
+    justify-content: center;
+}
+
+button {
+    background: rgb(229, 190, 48);
+    border: none;
+    width: 200px;
+    padding: 1rem;
+    color: white;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 0.2rem;
+}
+
+label {
+    display: block;
+    margin-top: 1rem;
+}
+
+.form-error {
+    display: none;
+    color: red;
+    margin-top: 2px;
+}
+
+.contact {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+input {
+    width: 100%;
+    margin-top: 2px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+}

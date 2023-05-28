@@ -1,0 +1,27 @@
+async function getPost(){
+
+    const response = await fetch(url);
+    const results = await response.json();
+
+    const post = results;
+
+    for(let i = 0; i !=12; i++){
+        
+
+        resultsContainer.innerHTML += `
+
+        <div class="card">
+
+        <img class="image" src="${post[i].jetpack_featured_media_url}"/>
+        <h2 class="blog-title">${post[i].title.rendered}</h2>
+
+        </div>
+
+        
+        
+
+        `
+    }
+}
+
+getPost();
