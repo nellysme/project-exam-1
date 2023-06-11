@@ -30,6 +30,10 @@ This site is made with a Wordpress API.
 ```bash
 [git clone git@github.com:NoroffFEU/portfolio-1-example.git](https://github.com/nellysme/project-exam-1.git)
 ```
+
+### Live link
+[Live demo](https://guileless-cobbler-65dead.netlify.app/)
+
 # Contact
 
 
