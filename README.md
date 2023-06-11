@@ -30,10 +30,10 @@ This site is made with a Wordpress API.
 ```bash
 [git clone git@github.com:NoroffFEU/portfolio-1-example.git](https://github.com/nellysme/project-exam-1.git)
 ```
+# Contact
 
 
-
-[My LinkedIn page](www.linkedin.com)
+[My LinkedIn](https://no.linkedin.com/in/nellysmedsrud)
 
 ## License
 
