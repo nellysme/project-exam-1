@@ -1,6 +1,7 @@
 # My Plants
 
-![my-plants](https://github.com/nellysme/project-exam-1/assets/95544187/254ccd2c-cee9-4a1e-83a5-8b7247747d2c)
+
+![my-plants](https://github.com/nellysme/project-exam-1/assets/95544187/f54d3958-6b5b-4d5d-9380-58f6bd55b9f6)
 
 
 ## Description
