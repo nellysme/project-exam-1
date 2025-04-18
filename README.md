@@ -24,7 +24,7 @@ Here it what is included:
 
 ### Installing
 
-This site is made with a Wordpress API.
+This site is made with a Wordpress API. (API not working)
 
 1. Clone the repo:
 
