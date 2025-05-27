@@ -33,7 +33,7 @@ This site is made with a Wordpress API. (API not working)
 ```
 
 ### Live link
-[Live demo](https://thunderous-bavarois-a3af5f.netlify.app/contact)
+[Live demo](https://thunderous-bavarois-a3af5f.netlify.app/)
 
 # Contact
 
