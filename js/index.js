@@ -1,68 +1,63 @@
-const url = "https://work.bynelly.no//wp-json/wp/v2/posts/";
-const postsContainer = document.querySelector('.latest-posts');
+const url = "https://perenual.com/api/v2/species/details/";
+const postsContainer = document.querySelector(".latest-posts");
 const specificId = 38;
-const loadingSpinner = document.querySelector('.loading-circle');
+const loadingSpinner = document.querySelector(".loading-circle");
 
-const imageSliderContainer = document.querySelector('.image-slider-container');
-const images = imageSliderContainer.querySelectorAll('img');
+const imageSliderContainer = document.querySelector(".image-slider-container");
+const images = imageSliderContainer.querySelectorAll("img");
 
+loadingSpinner.style.display = "block";
 
-
-
-
-loadingSpinner.style.display = 'block'; 
-
-fetch(url + specificId)
-  .then(response => response.json())
-  .then(data => {
+fetch(url + specificId + "?key=sk-HeE36835fdb93d3fc10694")
+  .then((response) => response.json())
+  .then((data) => {
     const post = data;
+
     const innerContent = `
-      <h2 class="everything-you">${post.title.rendered}</h2>
-      ${post.excerpt.rendered}
+      <h2 class="everything-you">${post.common_name}</h2>
+      <p>${post.description || "No description available."}</p>
       <div class="button-learn"><button class="button"><a href ="blog.html">Learn more</a></button></div>
     `;
     postsContainer.innerHTML += innerContent;
     console.log(data);
 
-    loadingSpinner.style.display = 'none'; 
+    loadingSpinner.style.display = "none";
 
-
-
-
-
-
-const imageSliderContainer = document.querySelector('.image-slider-container');
-const images = imageSliderContainer.querySelectorAll('img');
-
+    // Image slider logikk
 let currentIndex = 0;
-const slideWidth = images[0].clientWidth * 2;
-const totalSlides = images.length;
+const imagesPerPage = 4;
+const totalImages = images.length;
 
-function goToSlide(index) {
-  imageSliderContainer.style.transform = `translateX(-${index * slideWidth}px)`;
+// Beregn total mulig scroll (runder ned hvis ikke nok til ny full gruppe)
+const maxIndex = Math.ceil(totalImages / imagesPerPage) - 1;
+
+function goToGroup(index) {
+  const slideWidth = imageSliderContainer.clientWidth / imagesPerPage;
   currentIndex = index;
-}
 
-function nextSlide() {
-  if (currentIndex === totalSlides - 2) { 
-    goToSlide(0);
-  } else {
-    goToSlide(currentIndex + 1);
+  if (currentIndex > maxIndex) {
+    currentIndex = 0;
+  } else if (currentIndex < 0) {
+    currentIndex = maxIndex;
   }
+
+  const offset = currentIndex * slideWidth * imagesPerPage;
+  imageSliderContainer.style.transform = `translateX(-${offset}px)`;
 }
 
-function previousSlide() {
-  if (currentIndex === 0) {
-    goToSlide(totalSlides - 2);
-  } else {
-    goToSlide(currentIndex - 1);
-  }
+function nextGroup() {
+  goToGroup(currentIndex + 1);
 }
 
-document.querySelector('.next-button').addEventListener('click', nextSlide);
-document.querySelector('.previous-button').addEventListener('click', previousSlide);
+function prevGroup() {
+  goToGroup(currentIndex - 1);
+}
+
+document.querySelector(".next-button").addEventListener("click", nextGroup);
+document.querySelector(".previous-button").addEventListener("click", prevGroup);
 
 
-    
+// Initial visning
+goToGroup(0);
+
   });
-  
